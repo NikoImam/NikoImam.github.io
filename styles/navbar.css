@@ -1,0 +1,37 @@
+.navbar-wrapper {
+    margin: 0;
+    position: sticky;
+    top: 0;
+    padding-left: 0;
+    width: 100%;
+    background-color: rgb(236, 236, 253);
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.nav a {
+    display: block;
+    width: 80px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+}
+
+.active {
+    background-color: rgba(173, 221, 240, 0.664);
+}
+
+.nav a:hover {
+    background-color: rgba(173, 221, 240, 0.664);
+    color: rgb(73, 73, 73);
+}
+
+.nav {
+    float: left;
+}

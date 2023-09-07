@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Лидеры Формулы-1: Сезоны</title>
+    <meta lang="en">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/body.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/info.css">
+
+</head>
+
+<body class="body" onload="getAllSeasonsList()">
+
+    <header class="header">
+        <h1>F1 TopList</h1>
+        <div class="navbar-wrapper">
+            <ul class="navbar">
+                <li class="nav"><a href="../index.html">Home</a></li>
+                <li class="nav"><a href="pilots.html">Pilots</a></li>
+                <li class="nav"><a class="active" href="seasonsInfo.html">Seasons</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="season-info-wrapper">
+        <ul class="informatter">
+            <li>
+                <ul class="season-info">
+                    <li><select name="season" id="season-select" onchange="getAllRoundsList()">
+                        <option value="" selected disabled>Choose season</option>
+                    </select></li>
+                    <li><select name="round" id="round-select" onchange="getSeasonInfo()">
+                        <option value="" selected disabled >Choose round</option>
+                    </select></li>
+                </ul>
+            </li>
+            <li>
+                <div id="info">
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+<script src="seasonsInfo.js">
+</script>
+
+</html>
