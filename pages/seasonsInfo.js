@@ -1,5 +1,5 @@
 async function getAllSeasonsList() {
-    let response = await fetch('http://ergast.com/api/f1/seasons.json?limit=100');
+    let response = await fetch('http://ergast.com/api/f1/seasons.json?limit=30');
     if (response.ok) {
         let json = await response.json();
         let seasons = json.MRData.SeasonTable.Seasons;
@@ -18,7 +18,7 @@ async function getAllSeasonsList() {
 async function getAllRoundsList() {
     let selectedSeason = document.querySelector('#season-select');
     let year = selectedSeason.value;
-    let response = await fetch('http://ergast.com/api/f1/' + year + '.json?limit=50');
+    let response = await fetch('http://ergast.com/api/f1/' + year + '.json?limit=30');
     if (response.ok) {
         let json = await response.json();
         let races = json.MRData.RaceTable.Races;
