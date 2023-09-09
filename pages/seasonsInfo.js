@@ -1,5 +1,5 @@
 async function getAllSeasonsList() {
-    let response = await fetch('http://ergast.com/api/f1/seasons.json?limit=30');
+    let response = await fetch('http://ergast.com/api/f1/seasons.json?limit=100');
     if (response.ok) {
         let json = await response.json();
         let seasons = json.MRData.SeasonTable.Seasons;
