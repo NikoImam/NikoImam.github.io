@@ -1,5 +1,5 @@
 async function viewPilots() {
-    let response = await fetch('https://ergast.com/api/f1/drivers.json?limit=30');
+    let response = await fetch('https://ergast.com/api/f1/drivers.json?limit=1000');
 
     if (response.ok) {
         let json = await response.json();
