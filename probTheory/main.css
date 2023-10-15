@@ -1,0 +1,38 @@
+@media screen and (min-width: 1000px) {
+    .main {
+        margin-left: 100px;
+        margin-top: 20px;
+    }
+    .main input {
+        width: 100px;
+    }
+    .form-check-input {
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .main {
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+    .main input {
+        width: 50px;
+    }
+    .form-check-input {
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main {
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    .main input {
+        width: 40px;
+    }
+    .form-check-input {
+        height: 20px;
+    }
+}

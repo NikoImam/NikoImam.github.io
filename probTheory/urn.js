@@ -47,7 +47,7 @@ async function calcUrn() {
     }
 
     if (sumR == k)
-        result.innerHTML = 'Result: ' + up / under;
+        result.innerHTML = 'Result: ' + '<span style="color: rgb(0, 148, 104);font-weight: bold;">' + up / under + '</span>';
     else
         result.innerHTML = 'Incorrect input data';
 }
