@@ -10,13 +10,23 @@
     <script src="viewer.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="urn.js"></script>
 </head>
 
 <body onload="viewBlocks()">
     <div id="header"></div>
 
     <div class="main">
-
+        <p>Number of all elements: <input class="input" type="text" id="inp-n" placeholder="n" /></p>
+        <p>Number of extracted: <input class="input" type="text" id="inp-k" placeholder="k" /></p>
+        <div id="groups">
+            <p id='p1'>m<sub>1</sub>: <input class="input" type="text" id="m1" placeholder="m1" value="0" /> r<sub>1</sub>: <input class="input" type="text" id="r1" placeholder="r1" value="0" /></p>
+        </div>
+        <button onclick="addGroup()">Add group</button>
+        <button onclick="deleteGroup()">Delete group</button>
+        <br>
+        <button onclick="calcUrn()" style="margin-top: 5px;">Calculate</button>
+        <div id="result"></div>
     </div>
 
     <div id="footer"></div>
