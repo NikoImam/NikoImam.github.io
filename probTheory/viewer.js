@@ -1,5 +1,6 @@
 async function viewBlocks() {
     await viewHeader();
+    await viewFooter();
 }
 
 async function viewHeader() {
@@ -10,5 +11,8 @@ async function viewHeader() {
 }
 
 async function viewFooter() {
-
+    footer = document.getElementById("footer");
+    let response = await fetch('footer.html');
+    let body = await response.text();
+    footer.innerHTML = body;
 }

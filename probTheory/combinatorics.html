@@ -18,18 +18,18 @@
     <div id="header"></div>
 
     <div class="main">
-        <select name="comb-type" id="type-select" onchange="evalCombPre()">
+        <select name="comb-type" id="type-select" onchange="evalComb(false)">
             <option value="" selected disabled>Choose formula</option>
             <option value="placements">Placements</option>
             <option value="permutations">Permutations</option>
             <option value="combinations">Combinations</option>
         </select>
-        <div id="description"></div>
         <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="repet">
-            <label class="form-check-label" for="flexSwitchCheckDefault">With repetitions</label>
+            <input class="form-check-input" type="checkbox" role="switch" id="repet" disabled onchange="evalComb(false)">
+            <label class="form-check-label" for="repet">With repetitions</label>
         </div>
-        <button id="eval" onclick="evalComb()">Calculate</button>
+        <div id="description"></div>
+        <button id="eval" onclick="evalComb(true)">Calculate</button>
         <div id="result"></div>
     </div>
 
