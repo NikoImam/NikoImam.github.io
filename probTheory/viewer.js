@@ -4,7 +4,9 @@ async function viewBlocks() {
 
 async function viewHeader() {
     header = document.getElementById("header");
-    header.innerHTML = '<p>h</p>';
+    let response = await fetch('navbar.html');
+    let body = await response.text();
+    header.innerHTML = body;
 }
 
 async function viewFooter() {
