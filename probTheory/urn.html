@@ -18,16 +18,28 @@
     <div id="header"></div>
 
     <div class="main">
-        <p>Number of all elements: <input class="input" type="text" id="inp-n" placeholder="n" /></p>
-        <p>Number of extracted: <input class="input" type="text" id="inp-k" placeholder="k" /></p>
-        <div id="groups">
-            <p id='p1'>m<sub>1</sub>: <input class="input" type="text" id="m1" placeholder="m1" value="0" /> r<sub>1</sub>: <input class="input" type="text" id="r1" placeholder="r1" value="0" /></p>
+        <p><select name="task-type" id="type-select" onchange="viewTasks()">
+            <option value="" selected disabled>Choose task type</option>
+            <option value="1">Type 1</option>
+            <option value="2">Type 2</option>
+        </select></p>
+        <div id="1" style="display: none;">
+            <p>
+                Total <input class="input" type="text" id="inp-n" placeholder="n"> elements,<br> among which there are <input class="input" type="text" id="inp-m" placeholder="m" /> labeled.
+            </p>
+            <p><input class="input" type="text" id="inp-k" placeholder="k"> items are retrieved.</p>
+            <div id="result">The probability that all the extracted items will be marked:</div>
+            <button class="btn btn-primary" onclick="calcUrn1()" style="margin-top: 5px;">Calculate</button>
         </div>
-        <button onclick="addGroup()">Add group</button>
-        <button onclick="deleteGroup()">Delete group</button>
-        <br>
-        <button onclick="calcUrn()" style="margin-top: 5px;">Calculate</button>
-        <div id="result"></div>
+        <div id="2" style="display:none">
+            <p>
+                Total <input class="input" type="text" id="inp-n2" placeholder="n"> elements,<br> among which there are <input class="input" type="text" id="inp-m2" placeholder="m" /> labeled.
+            </p>
+            <p><input class="input" type="text" id="inp-k2" placeholder="k" /> items are retrieved.</p>
+            <div id="res">The probability that among the extracted <input class="input" type="text" id="inp-r2" placeholder="r"> items will be labeled: <span id="result2" style="display:none; color: rgb(0, 148, 104);font-weight: bold; border: solid; border-color: grey; border-radius: 4px; border-width: 1px; padding: 0px 10px 0px 10px; width: min-content;"></span></div>
+            <button class="btn btn-primary" onclick="calcUrn2()" style="margin-top: 5px;">Calculate</button>
+        </div>
+        <p id="error" style="color: red;"></p>
     </div>
 
     <div id="footer"></div>

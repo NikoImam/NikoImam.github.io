@@ -36,3 +36,15 @@
         height: 20px;
     }
 }
+
+.main input {
+    height: 24px;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: gainsboro;
+}
+
+.main select {
+    border-radius: 15px;
+    border-width: 1px;
+}

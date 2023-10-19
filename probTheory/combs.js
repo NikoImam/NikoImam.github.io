@@ -34,13 +34,13 @@ async function evalComb(canCalculate) {
             const n = parseInt(document.getElementById('inp-n').value);
             if (repet) {
                 if (k >= 0 && n >= 0) {
-                    result.innerHTML = 'Result: ' + '<span style="color: rgb(0, 148, 104);font-weight: bold;">' + await calcPlacementsNumber(k, n, repet) + "</span>";
+                    result.innerHTML = 'Result: ' + '<span style="color: rgb(0, 148, 104);font-weight: bold; border: solid; border-color: grey; border-radius: 4px; border-width: 1px; padding: 0px 10px 0px 10px">' + await calcPlacementsNumber(k, n, repet) + "</span>";
                 } else {
                     result.innerHTML = 'Incorrect input data';
                 }
             } else {
                 if (k >= 0 && n >= 0 && n >= k) {
-                    result.innerHTML = 'Result: ' + '<span style="color: rgb(0, 148, 104);font-weight: bold;">' + await calcPlacementsNumber(k, n, repet) + "</span>";
+                    result.innerHTML = 'Result: ' + '<span style="color: rgb(0, 148, 104);font-weight: bold; border: solid; border-color: grey; border-radius: 4px; border-width: 1px; padding: 0px 10px 0px 10px">' + await calcPlacementsNumber(k, n, repet) + "</span>";
                 } else {
                     result.innerHTML = 'Incorrect input data';
                 }
@@ -51,13 +51,13 @@ async function evalComb(canCalculate) {
             if (repet) {
                 const nList = document.getElementById('inp-n').value;
                 if (n >= 0 && await checkList(n, nList)) {
-                    result.innerHTML = 'Result: ' + '<span style="color: rgb(0, 148, 104);font-weight: bold;">' + await calcPermutionsNumber(n, nList, repet) + "</span>";
+                    result.innerHTML = 'Result: ' + '<span style="color: rgb(0, 148, 104);font-weight: bold; border: solid; border-color: grey; border-radius: 4px; border-width: 1px; padding: 0px 10px 0px 10px">' + await calcPermutionsNumber(n, nList, repet) + "</span>";
                 } else {
                     result.innerHTML = 'Incorrect input data';
                 }
             } else {
                 if (n >= 0) {
-                    result.innerHTML = 'Result: ' + '<span style="color: rgb(0, 148, 104);font-weight: bold;">' + await calcPermutionsNumber(n, NaN, repet) + "</span>";
+                    result.innerHTML = 'Result: ' + '<span style="color: rgb(0, 148, 104);font-weight: bold; border: solid; border-color: grey; border-radius: 4px; border-width: 1px; padding: 0px 10px 0px 10px">' + await calcPermutionsNumber(n, NaN, repet) + "</span>";
                 } else {
                     result.innerHTML = 'Incorrect input data';
                 }
@@ -66,8 +66,8 @@ async function evalComb(canCalculate) {
         } else if (type == 'combinations') {
             const k = parseInt(document.getElementById('inp-k').value);
             const n = parseInt(document.getElementById('inp-n').value);
-            if (k >= 0 && n >= 0 && (repet==false && n >= k || repet == true && n + k - 1 >= k)) {
-                result.innerHTML = 'Result: ' + '<span style="color: rgb(0, 148, 104);font-weight: bold;">' + await calcCombinationsNumbers(k, n, repet) + "</span>";
+            if (k >= 0 && n >= 0 && (repet == false && n >= k || repet == true && n + k - 1 >= k)) {
+                result.innerHTML = 'Result: ' + '<span style="color: rgb(0, 148, 104);font-weight: bold; border: solid; border-color: grey; border-radius: 4px; border-width: 1px; padding: 0px 10px 0px 10px">' + await calcCombinationsNumbers(k, n, repet) + "</span>";
             } else {
                 result.innerHTML = 'Incorrect input data';
             }
