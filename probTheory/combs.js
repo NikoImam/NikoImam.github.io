@@ -66,7 +66,7 @@ async function evalComb(canCalculate) {
         } else if (type == 'combinations') {
             const k = parseInt(document.getElementById('inp-k').value);
             const n = parseInt(document.getElementById('inp-n').value);
-            if (k >= 0 && n >= 0 && n >= k) {
+            if (k >= 0 && n >= 0 && (repet==false && n >= k || repet == true)) {
                 result.innerHTML = 'Result: ' + '<span style="color: rgb(0, 148, 104);font-weight: bold;">' + await calcCombinationsNumbers(k, n, repet) + "</span>";
             } else {
                 result.innerHTML = 'Incorrect input data';
