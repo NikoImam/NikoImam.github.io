@@ -118,14 +118,14 @@ async function calcUrn2() {
     } else if (m > n) {
         error.innerHTML = "Error: (m) should be less than (n)";
         return;
-    } else if (k > m) {
-        error.innerHTML = "Error: (k) should be less than (m)";
-        return;
     } else if (isNaN(r)) {
         error.innerHTML = "Error: Non-numeric parameter (r)";
         return;
     } else if (r < 0) {
         error.innerHTML = "Error: (r) less than zero";
+        return;
+    } else if (r > m) {
+        error.innerHTML = "Error: (r) should be less than (m)";
         return;
     } else if (r > k) {
         error.innerHTML = "Error: (r) should be less than (k)";
